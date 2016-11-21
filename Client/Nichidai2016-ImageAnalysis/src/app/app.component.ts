@@ -18,12 +18,11 @@ export class AppComponent {
     this.alc = watson.alchemy_language({
         api_key: '25d7ba025058cc03b15c7ceaaec6015fb5ff5322'
       });
-      this.alc.emotion(this.parameters, function (err, response) {
-  if (err)
-    console.log('error:', err);
-  else
-    console.log(JSON.stringify(response, null, 2));
-});
+    this.alc.emotion(this.parameters, function (err, response) {
+      if (err) console.log('error:', err);
+      else console.log(JSON.stringify(response, null, 2));
+    }
+    );
   }
-
+  
 }
