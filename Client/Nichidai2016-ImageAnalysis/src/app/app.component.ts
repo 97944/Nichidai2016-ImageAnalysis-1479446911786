@@ -7,7 +7,7 @@ var watson = require('watson-developer-cloud');
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '日大特別講義2016 画像解析';
+  title = '日大特別講義2016 画像解析アプリ';
   private alc: any;
   
   private parameters = {
