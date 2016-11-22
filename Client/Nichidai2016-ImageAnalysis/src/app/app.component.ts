@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FileUploader } from 'ng2-file-upload';
+
 var watson = require('watson-developer-cloud');
 
 @Component({
@@ -9,6 +11,15 @@ var watson = require('watson-developer-cloud');
 export class AppComponent {
   title = '日大特別講義2016 画像解析アプリ';
   private alc: any;
+  public uploader:FileUploader;
+  watsonResult: any;
+
+  constructor(){
+    this.uploader = new FileUploader({url: '/up',itemAlias: 'multipartFile',disableMultipart: false});
+    this.uploader.onCompleteItem = (item:any,response:any,status:any,headers:any) => {
+      this.watsonResult = JSON.parse(response).images[0].classifiers[0].classes;
+    };
+  }
   
   private parameters = {
     url: 'http://www.charliechaplin.com/en/synopsis/articles/29-The-Great-Dictator-s-Speech'
