@@ -20,9 +20,9 @@ public class HelloController {
 	@RequestMapping(value = "/up", method = RequestMethod.POST)
 	public VisualClassification post(@RequestParam MultipartFile multipartFile) throws IOException {
 
-		// ファイルが空の場合は異常終了
+		
 		if (multipartFile.isEmpty()) {
-			// 異常終了時の処理
+			
 			return null;
 		} else {
 			VisualRecognition service = new VisualRecognition(VisualRecognition.VERSION_DATE_2016_05_20);
