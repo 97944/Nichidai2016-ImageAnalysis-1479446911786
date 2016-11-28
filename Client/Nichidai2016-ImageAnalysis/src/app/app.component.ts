@@ -13,6 +13,7 @@ export class AppComponent {
   private alc: any;
   public uploader:FileUploader;
   watsonResult: any;
+  
 
   constructor(){
     this.uploader = new FileUploader({url: '/up',itemAlias: 'multipartFile',disableMultipart: false});
