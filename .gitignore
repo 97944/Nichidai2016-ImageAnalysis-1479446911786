@@ -3,4 +3,5 @@ target/generated-sources/
 target/maven-archiver/
 target/maven-status/
 target/TomcatHelloWorldApp-1.0-SNAPSHOT/*
-
+target/TomcatHelloWorldApp-1.0-SNAPSHOT.war
+/*.jpg
